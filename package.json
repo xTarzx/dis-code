@@ -1,0 +1,25 @@
+{
+  "name": "dis",
+  "displayName": "dis",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.89.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "dis",
+      "aliases": ["dis", "dis"],
+      "extensions": [".dis"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "dis",
+      "scopeName": "source.dis",
+      "path": "./syntaxes/dis.tmLanguage.json"
+    }]
+  }
+}
