@@ -4,29 +4,17 @@
 	"patterns": [
 		{
 			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
 		}
+
 	],
 	"repository": {
 		"keywords": {
 			"patterns": [{
 				"name": "keyword.control.dis",
-				"match": "\\b(if|while|for|return)\\b"
+				"match": "\\b(mov|add|sub|cmp|jlt|jgt|jeq|jne|jmp|run|ret|die|out|prt|dbg|rdn|rdc|rln)\\b"
 			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.dis",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.dis",
-					"match": "\\\\."
-				}
-			]
 		}
+		
 	},
 	"scopeName": "source.dis"
 }
