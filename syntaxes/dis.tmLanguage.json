@@ -4,8 +4,16 @@
 	"patterns": [
 		{
 			"include": "#keywords"
+		},
+		{
+			"include": "#labels"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#memlocs"
 		}
-
 	],
 	"repository": {
 		"keywords": {
@@ -13,8 +21,26 @@
 				"name": "keyword.control.dis",
 				"match": "\\b(mov|add|sub|cmp|jlt|jgt|jeq|jne|jmp|run|ret|die|out|prt|dbg|rdn|rdc|rln)\\b"
 			}]
-		}
-		
+		},
+		"labels": {
+			"patterns": [{
+				"name": "entity.name.tag",
+				"match": ".*:"
+			}]
+		},
+		"comments": {
+			"patterns": [{
+				"name": "comment.line.dis",
+				"match": "^-.*"
+			}]
+		},
+
+		"memlocs": {
+			"patterns": [{
+				"name": "variable",
+				"match": "(#|&|&#)[e0-9]+"
+			}]
+		}		
 	},
 	"scopeName": "source.dis"
 }
